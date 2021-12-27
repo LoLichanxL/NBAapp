@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/main_screen">
+    <fragment
+        tools:layout="@layout/fragment_main_screen"
+        android:name="com.bobnevpavel.nbanews.presentation.fragments.MainScreenFragment"
+        android:id="@+id/main_screen"
+        >
+        <action
+            android:id="@+id/action_main_screen_to_news_fragment"
+            app:destination="@id/news_fragment" />
+    </fragment>
+    <fragment tools:layout="@layout/fragment_news_web_view"
+        android:name="com.bobnevpavel.nbanews.presentation.fragments.NewsWebViewFragment"
+        android:id="@+id/news_fragment">
+        <action
+            android:id="@+id/action_news_fragment_to_main_screen"
+            app:destination="@id/main_screen" />
+    </fragment>
+</navigation>
