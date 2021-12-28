@@ -13,8 +13,8 @@
             android:id="@+id/action_main_screen_to_news_fragment"
             app:destination="@id/news_fragment" />
     </fragment>
-    <fragment tools:layout="@layout/fragment_news_web_view"
-        android:name="com.bobnevpavel.nbanews.presentation.fragments.NewsWebViewFragment"
+    <fragment tools:layout="@layout/fragment_news"
+        android:name="com.bobnevpavel.nbanews.presentation.fragments.NewsFragment"
         android:id="@+id/news_fragment">
         <action
             android:id="@+id/action_news_fragment_to_main_screen"

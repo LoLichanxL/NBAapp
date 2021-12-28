@@ -1,5 +1,7 @@
 package com.bobnevpavel.nbanews.presentation.utils
 
+import com.bobnevpavel.domain.entities.Game
+import com.bobnevpavel.domain.entities.GameStatus
 import com.bobnevpavel.nbanews.R
 
 class GameUtil {
@@ -82,6 +84,11 @@ class GameUtil {
                 val result = date.split("-")
                 return result[1] + "." + result[2].substring(0, 2) 
             }else return "Date"
+        }
+        fun filterScheduledGames(data:List<Game>):List<Game>{
+            return data.filter {
+                it.gameStatus == GameStatus.Scheduled || it.gameStatus == GameStatus.InProgress
+            }
         }
     }
 }

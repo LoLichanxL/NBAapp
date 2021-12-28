@@ -17,5 +17,51 @@
         <item name="android:navigationBarColor">@color/black_light</item>
         <item name="colorPrimaryDark">@android:color/transparent</item>
 
+        <item name="mainScreenTitle">@style/Theme.NBANews.PageTitleLight</item>
+        <item name="leagueTitle">@style/Theme.NBANews.LeagueTitleLight</item>
+        <item name="leagueSubTitle">@style/Theme.NBANews.LeagueSubTitleLight</item>
+        <item name="arrowBackIcon">@style/Theme.NBANews.ArrowBackIconLight</item>
+        <item name="sportTitle">@style/Theme.NBANews.SportTitleLight</item>
+        <item name="newsTitle">@style/Theme.NBANews.NewsTitleLight</item>
+        <item name="newsDate">@style/Theme.NBANews.NewsDateLight</item>
+        <item name="gameStatus">@style/Theme.NBANews.GameStatusLight</item>
+        <item name="teamScore">@style/Theme.NBANews.GameScoreLight</item>
+        <item name="teamTitle">@style/Theme.NBANews.TeamTitleLight</item>
+    </style>
+    <style name="Theme.NBANews.PageTitleLight" parent="Theme.NBANews.PageTitle">>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Theme.NBANews.LeagueTitleLight" parent="Theme.NBANews.LeagueTitle">
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="Theme.NBANews.LeagueSubTitleLight" parent="Theme.NBANews.LeagueSubTitle">
+        <item name="android:textColor">@color/light_grey</item>
+    </style>
+
+    <style name="Theme.NBANews.ArrowBackIconLight" >
+        <item name="android:tint">@color/light_grey</item>
+    </style>
+    <style name="Theme.NBANews.SportTitleLight" parent="Theme.NBANews.SportTitle">
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="Theme.NBANews.NewsTitleLight" parent="Theme.NBANews.NewsTitle">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Theme.NBANews.GameStatusLight" parent="Theme.NBANews.GameStatus">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Theme.NBANews.NewsDateLight" parent="Theme.NBANews.NewsDate">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Theme.NBANews.GameScoreLight" parent="Theme.NBANews.GameScore">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Theme.NBANews.TeamTitleLight" parent="Theme.NBANews.TeamTitle">
+        <item name="android:textColor">@color/white</item>
     </style>
 </resources>

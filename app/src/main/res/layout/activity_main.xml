@@ -25,6 +25,7 @@
         android:background="@color/black_light"
         app:itemIconTint="@color/light_grey"
         app:itemTextColor="@color/light_grey"
-        app:menu="@menu/bottom_navigation_menu" />
+        app:menu="@menu/bottom_navigation_menu"
+        />
 
 </androidx.constraintlayout.motion.widget.MotionLayout>

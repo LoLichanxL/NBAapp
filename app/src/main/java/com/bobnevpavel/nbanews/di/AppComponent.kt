@@ -5,14 +5,12 @@ import com.bobnevpavel.data.mappers.NbaApiMapper
 import com.bobnevpavel.data.repositories.NbaRemoteDataSourceImpl
 import com.bobnevpavel.data.repositories.NbaRepositoryImpl
 import com.bobnevpavel.nbanews.presentation.fragments.MainScreenFragment
-import com.bobnevpavel.nbanews.view.MainScreenFragmentViewModel
+import com.bobnevpavel.nbanews.view.MainFragmentViewModel
 import dagger.Component
-import dagger.MapKey
 import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import javax.inject.Singleton
 
 @Component(modules = [NetworkModule::class, ViewModelModule::class])
 interface AppComponent {
@@ -49,7 +47,7 @@ class NetworkModule{
 @Module
 class ViewModelModule{
     @Provides
-    fun provideViewModelFactory(nbaRepositoryImpl: NbaRepositoryImpl):MainScreenFragmentViewModel.Factory{
-        return MainScreenFragmentViewModel.Factory(nbaRepositoryImpl)
+    fun provideViewModelFactory(nbaRepositoryImpl: NbaRepositoryImpl):MainFragmentViewModel.Factory{
+        return MainFragmentViewModel.Factory(nbaRepositoryImpl)
     }
 }

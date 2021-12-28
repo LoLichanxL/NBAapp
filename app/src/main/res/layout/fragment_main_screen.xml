@@ -52,8 +52,7 @@
         app:layout_constraintEnd_toEndOf="@id/end_guideline"
         app:layout_constraintTop_toTopOf="@id/top_guideline"
         android:text="@string/discover"
-        android:textColor="@color/white"
-        android:textSize="24sp"
+        style="?attr/mainScreenTitle"
         />
 
     <androidx.recyclerview.widget.RecyclerView

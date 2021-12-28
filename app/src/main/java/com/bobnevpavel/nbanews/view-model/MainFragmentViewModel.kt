@@ -1,24 +1,22 @@
 package com.bobnevpavel.nbanews.view
 
-import android.content.Context
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.bobnevpavel.data.repositories.NbaRepositoryImpl
-import com.bobnevpavel.domain.common.LoadingState
 import com.bobnevpavel.domain.common.Result
 import com.bobnevpavel.domain.entities.*
 import com.bobnevpavel.nbanews.presentation.rv.fingerprints.GameFingerPrint
 import com.bobnevpavel.nbanews.presentation.rv.fingerprints.LeagueLabelFingerPrint
 import com.bobnevpavel.nbanews.presentation.rv.fingerprints.NewsFingerPrint
-import dagger.assisted.AssistedInject
+import com.bobnevpavel.nbanews.presentation.utils.GameUtil
 import javax.inject.Inject
 import kotlinx.coroutines.*
 
 
-class MainScreenFragmentViewModel constructor(val nbaRepositoryImpl: NbaRepositoryImpl): ViewModel() {
+class MainFragmentViewModel constructor(val nbaRepositoryImpl: NbaRepositoryImpl): ViewModel() {
 
     private val _data:MutableLiveData<List<Item>> = MutableLiveData()
     val data:LiveData<List<Item>> = _data
@@ -32,12 +30,15 @@ class MainScreenFragmentViewModel constructor(val nbaRepositoryImpl: NbaReposito
                 when(gamesResult){
                     is Result.Success -> {
                         Log.d("Games", gamesResult.data.toString())
-                        _data.postValue(merge(listOf(newsResult.data[0]), listOf(LeagueLabel("NBA", "United States of America")), filterScheduledGames(gamesResult.data).subList(0, 20))) // Return first news and all games
+                        _data.postValue(merge(listOf(newsResult.data[0]), listOf(LeagueLabel("NBA", "United States of America")), GameUtil.filterScheduledGames(gamesResult.data).subList(0, 20))) // Return first news and all games
                     }
                     is  Result.Error -> {
                         throw (gamesResult.exception)
                     }
                 }
+            }
+            is Result.Error -> {
+                throw(newsResult.exception)
             }
         }
     }
@@ -49,14 +50,9 @@ class MainScreenFragmentViewModel constructor(val nbaRepositoryImpl: NbaReposito
 
     class Factory @Inject constructor(val nbaRepositoryImpl: NbaRepositoryImpl):ViewModelProvider.Factory{
         override fun <T : ViewModel?> create(modelClass: Class<T>): T {
-            return MainScreenFragmentViewModel(nbaRepositoryImpl) as T
+            return MainFragmentViewModel(nbaRepositoryImpl) as T
         }
     }
 
-    private fun filterScheduledGames(games:List<Game>):List<Game>{
-        return games.filter {
-            it.gameStatus == GameStatus.Scheduled || it.gameStatus == GameStatus.InProgress
-        }
-    }
 
 }

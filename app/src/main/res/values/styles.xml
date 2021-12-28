@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.NBANews.PageTitle" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="android:textSize">24sp</item>
+        <item name="fontFamily">@font/source_sans_pro_semi_bold</item>
+    </style>
+    <style name="Theme.NBANews.LeagueTitle" parent="TextAppearance.MaterialComponents.Headline2">
+        <item name="android:textSize">16sp</item>
+        <item name="fontFamily">@font/source_sans_pro_bold</item>
+    </style>
+
+    <style name="Theme.NBANews.LeagueSubTitle" parent="TextAppearance.MaterialComponents.Headline3">
+        <item name="android:textSize">14sp</item>
+        <item name="fontFamily">@font/source_sans_pro_bold</item>
+    </style>
+    <style name="Theme.NBANews.SportTitle" parent="TextAppearance.MaterialComponents.Headline3">
+        <item name="android:textSize">12sp</item>
+        <item name="fontFamily">@font/source_sans_pro_bold</item>
+    </style>
+    <style name="Theme.NBANews.NewsTitle" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="android:textSize">20sp</item>
+        <item name="fontFamily">@font/source_sans_pro_bold</item>
+    </style>
+
+    <style name="Theme.NBANews.NewsDate" parent="TextAppearance.MaterialComponents.Headline2">
+        <item name="android:textSize">12sp</item>
+        <item name="fontFamily">@font/source_sans_pro_semi_bold</item>
+    </style>
+
+
+    <style name="Theme.NBANews.GameStatus" parent="TextAppearance.MaterialComponents.Headline2">
+        <item name="android:textSize">14sp</item>
+        <item name="fontFamily">@font/source_sans_pro_semi_bold</item>
+    </style>
+
+    <style name="Theme.NBANews.GameScore" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="android:textSize">18sp</item>
+        <item name="fontFamily">@font/source_sans_pro_bold</item>
+    </style>
+
+    <style name="Theme.NBANews.TeamTitle" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="android:textSize">12sp</item>
+        <item name="fontFamily">@font/source_sans_pro_semi_bold</item>
+    </style>
+    <attr name="mainScreenTitle" format="reference" />
+    <attr name="leagueTitle" format="reference" />
+    <attr name="leagueSubTitle" format="reference" />
+    <attr name="arrowBackIcon" format="reference" />
+    <attr name="sportTitle" format="reference"/>
+    <attr name="newsTitle" format="reference"/>
+    <attr name="newsDate" format="reference"/>
+    <attr name="gameStatus" format="reference"/>
+    <attr name="teamScore" format="reference"/>
+    <attr name="teamTitle" format="reference"/>
+</resources>

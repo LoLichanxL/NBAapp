@@ -6,19 +6,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_marginTop="20dp"
     >
+
     <ImageView
         android:id="@+id/league_icon"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
-        android:src="@drawable/ic_nba_icon"
         android:scaleType="centerCrop"
-        />
+        android:src="@drawable/ic_nba_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/league_title"
@@ -27,25 +27,24 @@
         app:layout_constraintStart_toEndOf="@id/league_icon"
         app:layout_constraintTop_toTopOf="@id/league_icon"
         app:layout_constraintEnd_toStartOf="@id/arrow_forward"
+        app:layout_constraintBottom_toTopOf="@id/league_country"
         android:layout_marginStart="10dp"
-        android:textColor="@color/white"
         android:layout_marginEnd="20dp"
-        android:textSize="16sp"
+        style="?attr/leagueTitle"
         tools:text="NBA"
-        android:textStyle="bold"
         />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/league_country"
+        style="?attr/leagueSubTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:textColor="@color/light_grey"
-        android:textSize="14sp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/league_icon"
         app:layout_constraintEnd_toStartOf="@id/arrow_forward"
         app:layout_constraintStart_toEndOf="@id/league_icon"
         app:layout_constraintTop_toBottomOf="@id/league_title"
-        android:layout_marginEnd="20dp"
         tools:text="United States of America" />
 
     <ImageView
@@ -56,7 +55,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:src="@drawable/ic_arrow_forward"
-        app:tint="@color/light_grey"
+        style="?attr/arrowBackIcon"
         android:layout_marginEnd="20dp"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>
