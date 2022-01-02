@@ -12,7 +12,6 @@
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
-
         app:defaultNavHost="true"
         app:navGraph="@navigation/navigation_graph"
 
@@ -26,6 +25,7 @@
         app:itemIconTint="@color/light_grey"
         app:itemTextColor="@color/light_grey"
         app:menu="@menu/bottom_navigation_menu"
+        android:visibility="visible"
         />
 
 </androidx.constraintlayout.motion.widget.MotionLayout>

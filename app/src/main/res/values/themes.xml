@@ -27,6 +27,7 @@
         <item name="gameStatus">@style/Theme.NBANews.GameStatusLight</item>
         <item name="teamScore">@style/Theme.NBANews.GameScoreLight</item>
         <item name="teamTitle">@style/Theme.NBANews.TeamTitleLight</item>
+        <item name="loginButton">@style/Theme.NBANews.LoginButtonLight</item>
     </style>
     <style name="Theme.NBANews.PageTitleLight" parent="Theme.NBANews.PageTitle">>
         <item name="android:textColor">@color/white</item>
@@ -63,5 +64,14 @@
 
     <style name="Theme.NBANews.TeamTitleLight" parent="Theme.NBANews.TeamTitle">
         <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Theme.NBANews.LoginButtonLight" parent="Theme.NBANews.LoginButton">
+        <item name="materialThemeOverlay">@style/ThemeOverlayLoginButton</item>
+    </style>
+    
+    <style name="ThemeOverlayLoginButton">
+        <item name="colorPrimary">@color/accent</item>
+        <item name="colorOnPrimary">@color/white</item>
     </style>
 </resources>

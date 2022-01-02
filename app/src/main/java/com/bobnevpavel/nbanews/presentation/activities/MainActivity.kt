@@ -2,6 +2,7 @@ package com.bobnevpavel.nbanews.presentation.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.navigation.findNavController
 import com.bobnevpavel.nbanews.R
 import com.bobnevpavel.nbanews.appComponent

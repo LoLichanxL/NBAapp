@@ -39,9 +39,22 @@
     </style>
 
     <style name="Theme.NBANews.TeamTitle" parent="TextAppearance.MaterialComponents.Headline1">
-        <item name="android:textSize">12sp</item>
+        <item name="android:textSize">14sp</item>
         <item name="fontFamily">@font/source_sans_pro_semi_bold</item>
     </style>
+
+    <style name="Theme.NBANews.LoginButton" parent="Widget.MaterialComponents.Button">
+        <item name="textAllCaps">false</item>
+        <item name="shapeAppearance">@style/loginButtonShapeAppearance</item>
+        <item name="fontFamily">@font/source_sans_pro_semi_bold</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="loginButtonShapeAppearance" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20dp</item>
+    </style>
+
     <attr name="mainScreenTitle" format="reference" />
     <attr name="leagueTitle" format="reference" />
     <attr name="leagueSubTitle" format="reference" />
@@ -52,4 +65,5 @@
     <attr name="gameStatus" format="reference"/>
     <attr name="teamScore" format="reference"/>
     <attr name="teamTitle" format="reference"/>
+    <attr name="loginButton" format="reference"/>
 </resources>

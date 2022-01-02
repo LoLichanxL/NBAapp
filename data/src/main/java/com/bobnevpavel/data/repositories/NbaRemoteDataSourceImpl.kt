@@ -9,11 +9,12 @@ import com.bobnevpavel.domain.entities.News
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import javax.inject.Inject
+import javax.inject.Named
 
 class NbaRemoteDataSourceImpl @Inject constructor(
     val service: NbaApiService,
     val mapper: NbaApiMapper,
-    val apiKey: String
+    @param:Named("nbaApiKey")val apiKey:String
 ) : NbaRemoteDataSource {
     override suspend fun getAllNews(): Result<List<News>> = withContext(Dispatchers.IO) {
         try {

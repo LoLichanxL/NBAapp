@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "536917641337",
+    "project_id": "nbaapp-2e806",
+    "storage_bucket": "nbaapp-2e806.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:536917641337:android:9f377d6653f28a1a5a2ca8",
+        "android_client_info": {
+          "package_name": "com.bobnevpavel.nbanews"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "536917641337-o9p277lk9ioaqh0i8lsrihrnl1oa7232.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bobnevpavel.nbanews",
+            "certificate_hash": "e75fe8088779cf94857604a0c9771cc2765f49d7"
+          }
+        },
+        {
+          "client_id": "536917641337-5eai6na9re3dl7bt3glg77qpt6ujotfv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPrsZHy9v-cQU2Hxh5RnEqE5HigFmZL6k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "536917641337-5eai6na9re3dl7bt3glg77qpt6ujotfv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
